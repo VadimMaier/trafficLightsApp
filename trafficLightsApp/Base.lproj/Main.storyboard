@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,6 +25,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="jwS-DE-YmJ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="PTo-fd-KuN">
                                 <rect key="frame" x="118" y="64" width="179" height="573"/>
@@ -46,22 +49,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KkO-xw-AZa">
                                         <rect key="frame" x="0.0" y="394" width="179" height="179"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="KkO-xw-AZa" secondAttribute="height" multiplier="1:1" id="v0u-OC-0os"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KkO-xw-AZa" firstAttribute="top" secondItem="Z3a-vQ-qL6" secondAttribute="bottom" constant="18" id="DM5-oN-Fsm"/>
                                     <constraint firstItem="Z3a-vQ-qL6" firstAttribute="top" secondItem="dar-bm-Qw2" secondAttribute="bottom" constant="18" id="Veo-Uc-B7V"/>
-                                    <constraint firstItem="Z3a-vQ-qL6" firstAttribute="width" secondItem="Z3a-vQ-qL6" secondAttribute="height" multiplier="1:1" id="YQK-cS-Yc2"/>
-                                    <constraint firstItem="Z3a-vQ-qL6" firstAttribute="width" secondItem="Z3a-vQ-qL6" secondAttribute="height" multiplier="1:1" id="bF1-by-SoH"/>
                                     <constraint firstItem="KkO-xw-AZa" firstAttribute="width" secondItem="KkO-xw-AZa" secondAttribute="height" multiplier="1:1" id="jqA-mB-Jq5"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="03G-qe-CcK" secondAttribute="trailing" constant="25" id="5n8-bl-Rts"/>
                             <constraint firstItem="03G-qe-CcK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="DpU-9M-RP8"/>
@@ -71,6 +69,12 @@
                             <constraint firstItem="PTo-fd-KuN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="hfT-xK-2dC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenColorView" destination="KkO-xw-AZa" id="SlZ-R0-2rw"/>
+                        <outlet property="redColorView" destination="dar-bm-Qw2" id="bop-Na-KFi"/>
+                        <outlet property="startButton" destination="03G-qe-CcK" id="Wsx-P8-O6o"/>
+                        <outlet property="yellowColorView" destination="Z3a-vQ-qL6" id="1od-01-3oP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
